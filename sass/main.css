@@ -1,0 +1,280 @@
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  DEDICATED VARIABLES 
+/**/
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  DEDICATED VARIABLES 
+/**/
+@font-face {
+  font-family: "Nightingale-Light";
+  src: url("../fonts/nightingale-font-family/DTNightingale-Light.otf") format("otf"), url("../fonts/nightingale-font-family/DTNightingale-Light.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Archivo-Regular";
+  src: url("../fonts/archivo-font-family/Archivo-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Archivo-SemiBold";
+  src: url("../fonts/archivo-font-family/Archivo-SemiBold.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Archivo-Bold";
+  src: url("../fonts/archivo-font-family/Archivo-Bold.ttf") format("ttf");
+}
+/**
+  * --------------------------------------------------------------------------------------------------------------
+  *                                                  DEDICATED FUNCTIONS 
+  /**/
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  ELEMENTS APPLICATIONS
+/**/
+h1,
+h2 {
+  font-family: "Nightingale-Light";
+}
+@supports (-moz-appearance: none) {
+  h1,
+  h2 {
+    font-weight: 500;
+  }
+}
+
+body {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 65px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 55px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+}
+
+h5 {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding-left: 162px;
+  padding-right: 162px;
+}
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                      HEADER
+/**/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 15px 0 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+header .language {
+  display: flex;
+  gap: 11px;
+  position: absolute;
+  left: 7%;
+  border: 1px solid #231F20;
+  border-radius: 25px;
+  padding: 7px 15px 7px 8px;
+}
+header .content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+header .content-header .nav-header .list-nav {
+  display: flex;
+  gap: 72px;
+}
+header .content-header .nav-header .list-nav .element-list-nav {
+  list-style-type: none;
+}
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                       MAIN
+/**/
+.section-presentation {
+  position: relative;
+  height: 762px;
+}
+.section-presentation .left-img {
+  position: absolute;
+  left: 6%;
+  top: 10%;
+}
+.section-presentation .container-presentation {
+  display: flex;
+}
+.section-presentation .container-presentation .left-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+.section-presentation .container-presentation .left-container .content-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  width: 60%;
+}
+.section-presentation .container-presentation .left-container .content-presentation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  background-color: #931BCC;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.section-presentation .container-presentation .left-container .content-presentation a:hover {
+  opacity: 0.9;
+}
+.section-presentation .container-presentation .right-container {
+  width: 50%;
+}
+.section-presentation .container-presentation .right-container img {
+  width: 926px;
+  height: 819px;
+  max-width: 100%;
+}
+.section-presentation .right-img {
+  position: absolute;
+  right: 6%;
+  bottom: 10%;
+}
+
+.section-description {
+  background-color: #231F20;
+  color: #FFFFFF;
+  display: flex;
+  padding-top: 273px;
+  padding-bottom: 264px;
+}
+.section-description .left-container {
+  width: 50%;
+}
+.section-description .left-container img {
+  width: 100%;
+}
+.section-description .left-container h2 {
+  padding-top: 150px;
+}
+.section-description .left-container p {
+  padding: 40px 0;
+}
+.section-description .left-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  background-color: #931BCC;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.section-description .left-container a:hover {
+  opacity: 0.9;
+}
+.section-description .right-container {
+  width: 50%;
+}
+.section-description .right-container .pdg-left {
+  padding-left: 200px;
+}
+.section-description .right-container .pdg-left p {
+  padding: 40px 0;
+}
+.section-description .right-container .pdg-left a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+  color: #FFFFFF;
+  padding: 10px 30px;
+  background-color: #931BCC;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.section-description .right-container .pdg-left a:hover {
+  opacity: 0.9;
+}
+.section-description .right-container .pdg-left .container-lines {
+  padding-top: 150px;
+}
+.section-description .right-container .pdg-left .container-lines .container-block {
+  display: flex;
+  gap: 40px;
+}
+.section-description .right-container .pdg-left .container-lines .container-block img {
+  width: 25px;
+}
+.section-description .right-container .pdg-left .container-lines .line {
+  width: 25px;
+  padding: 19px 0 29px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-logiciels {
+  display: flex;
+}
+.section-logiciels .left-container {
+  width: 50%;
+}
+.section-logiciels .right-container {
+  width: 50%;
+}
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                      FOOTER
+/**//*# sourceMappingURL=main.css.map */

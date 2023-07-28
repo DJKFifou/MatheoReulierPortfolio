@@ -1,0 +1,458 @@
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  DEDICATED VARIABLES 
+/**/
+
+// -------------- * Primary colors * --------------
+
+$color-white : #FFFFFF;
+$color-black : #231F20;
+$color-purple : #931BCC;
+
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  DEDICATED VARIABLES 
+/**/
+
+// ------------- * Main Font library * -------------
+
+@font-face {
+    font-family: 'Nightingale-Light';
+    src: url('../fonts/nightingale-font-family/DTNightingale-Light.otf') format('otf'),
+        url('../fonts/nightingale-font-family/DTNightingale-Light.ttf') format('ttf');
+}
+
+// ------------- * Secondary Font library * -------------
+
+@font-face {
+    font-family: 'Archivo-Regular';
+    src: url('../fonts/archivo-font-family/Archivo-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Archivo-SemiBold';
+    src: url('../fonts/archivo-font-family/Archivo-SemiBold.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Archivo-Bold';
+    src: url('../fonts/archivo-font-family/Archivo-Bold.ttf') format('ttf');
+}
+
+
+// ------------- * Main Font Family * -------------
+
+$font-main-Light : "Nightingale-Light";
+
+// ------------- * Secondary Font library * -------------
+
+$font-secondary-Regular : "Archivo-Regular";
+$font-secondary-SemiBold : "Archivo-SemiBold";
+$font-secondary-Bold : "Archivo-Bold";
+
+
+/**
+  * --------------------------------------------------------------------------------------------------------------
+  *                                                  DEDICATED FUNCTIONS 
+  /**/
+
+// ------------- * Font Sizes * -------------
+
+// Global referent Font Size quotient
+$font-size-quotient: 1;
+
+// Font Size Function 
+@function pixelsCalc($pxSize) {
+    @return ($pxSize * $font-size-quotient)+px;
+}
+
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                  ELEMENTS APPLICATIONS
+/**/
+
+// -------------- * Primary Font Families * --------------
+
+h1,
+h2 {
+    font-family: $font-main-Light;
+
+    @supports (-moz-appearance:none) {
+        font-weight: 500;
+    }
+}
+
+// -------------- * Secondary Font Families * --------------
+
+body {
+    font-family: 'Poppins'; // Poppins
+    font-weight: 400;
+}
+
+// -------------- * Font Sizes * --------------
+
+// * Size h1 *
+
+h1 {
+    font-size: 50px;
+    line-height: 65px;
+    margin: 0;
+}
+
+// * Size h2 *
+
+h2 {
+    font-size: 40px;
+    line-height: 55px;
+    margin: 0;
+}
+
+// * Size h3 *
+
+h3 {
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0;
+}
+
+// * Size h4 *
+
+h4 {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+}
+
+// * Size h5 *
+
+h5 {
+    font-size: 14px !important;
+    line-height: 16px !important;
+    margin: 0;
+}
+
+// * Size p *
+p {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding-left: 162px;
+    padding-right: 162px;
+}
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                      HEADER
+/**/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 15px 0 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+
+    .language {
+        display: flex;
+        gap: 11px;
+        position: absolute;
+        left: 7%;
+        border: 1px solid $color-black;
+        border-radius: 20px;
+        padding: 7px 15px 7px 8px;
+    }
+
+    .content-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .nav-header {
+            .list-nav {
+                display: flex;
+                gap: 72px;
+
+                .element-list-nav {
+                    list-style-type: none;
+                }
+            }
+        }
+    }
+}
+
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                       MAIN
+/**/
+
+.section-presentation {
+    position: relative;
+    height: 762px;
+
+    .left-img {
+        position: absolute;
+        left: 6%;
+        top: 10%;
+    }
+
+    .container-presentation {
+        display: flex;
+        height: 100%;
+
+        .left-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 50%;
+
+            .content-presentation {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+                width: 60%;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: fit-content;
+                    gap: 10px;
+                    color: $color-white;
+                    padding: 10px 30px;
+                    background-color: $color-purple;
+                    border-radius: 20px;
+                    text-decoration: none;
+
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+
+        .right-container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            img {
+                height: 80%;
+            }
+        }
+    }
+
+    .right-img {
+        position: absolute;
+        right: 6%;
+        bottom: 10%;
+    }
+}
+
+
+.section-description {
+    background-color: $color-black;
+    color: $color-white;
+    display: flex;
+    padding-top: 273px;
+    padding-bottom: 264px;
+
+    .left-container {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            padding-top: 150px;
+        }
+
+        p {
+            padding: 40px 0;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            gap: 10px;
+            color: $color-white;
+            padding: 10px 30px;
+            background-color: $color-purple;
+            border-radius: 20px;
+            text-decoration: none;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .right-container {
+        width: 50%;
+
+        .pdg-left {
+            padding-left: 200px;
+
+            p {
+                padding: 40px 0;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                gap: 10px;
+                color: $color-white;
+                padding: 10px 30px;
+                background-color: $color-purple;
+                border-radius: 20px;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+
+            .container-lines {
+                padding-top: 150px;
+
+                .container-block {
+                    display: flex;
+                    gap: 40px;
+
+                    img {
+                        width: 25px;
+                    }
+                }
+
+                .line {
+                    width: 25px;
+                    padding: 19px 0 29px;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.section-logiciels {
+    display: flex;
+    margin: 150px 0;
+
+    .left-container {
+        display: flex;
+        width: 50%;
+
+        .line-logiciels {
+            height: 100%;
+            margin-right: 64px;
+        }
+
+        .container-logiciels {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .content-logiciel {
+                display: flex;
+                gap: 40px;
+                width: fit-content;
+                align-items: center;
+            }
+        }
+    }
+
+    .right-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+
+        .content-text {
+            z-index: 1;
+        }
+
+        img {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+.section-projet {
+    padding: 230px 162px;
+    background-color: $color-black;
+    display: flex;
+    color: $color-white;
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 50%;
+        z-index: 1;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            gap: 10px;
+            color: $color-white;
+            padding: 10px 30px;
+            background-color: $color-purple;
+            border-radius: 20px;
+            text-decoration: none;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .right-container {
+        position: relative;
+        width: 50%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+
+        .projets {
+            width: 626px;
+            height: 477px;
+        }
+    }
+
+    .img-abs {
+        position: absolute;
+        right: 0;
+    }
+}
+
+
+/**
+* --------------------------------------------------------------------------------------------------------------
+*                                                      FOOTER
+/**/
